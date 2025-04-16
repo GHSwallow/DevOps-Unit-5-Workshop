@@ -1,4 +1,4 @@
-![Build and Test](https://github.com/youruser/my-repo/actions/workflows/pull-request.yaml/badge.svg?branch=main)
+![Build and Test](https://github.com/ghswallow/DevOps-Unit-5-Workshop/actions/workflows/pull-request.yaml/badge.svg?branch=main)
 # DevOps Unit 5 Workshop
 
 Welcome to the Unit 5 Workshop!

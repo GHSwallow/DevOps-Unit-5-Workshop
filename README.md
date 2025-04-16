@@ -1,3 +1,4 @@
+![Build and Test](https://github.com/youruser/my-repo/actions/workflows/build.yml/badge.svg?branch=main)
 # DevOps Unit 5 Workshop
 
 Welcome to the Unit 5 Workshop!

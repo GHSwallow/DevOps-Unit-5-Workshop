@@ -1,0 +1,38 @@
+name: Continuous Integration
+on: [push]
+
+jobs:
+  init:
+    name: Init
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print Hello World
+        run: echo "Hello World"
+  TestDotnet:
+    name: Build and test C# code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x.x'
+      - name: build C#
+        run: dotnet build
+      - name: run C# tests
+        run: dotnet test
+  TestNode:
+    name: Build and test ts code
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./DotnetTemplate.Web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: install dependencies 
+        run: npm install
+      - name: run node tests
+        run: npm t
+      - name: run node lint
+        run: npm run lint
